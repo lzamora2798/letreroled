@@ -100,11 +100,11 @@ PROGMEM const unsigned char CH[] = {
 4, 8, B00001000, B00000100, B00001000, B00000100, B00000000, // ~
 };
 
-int data = 8;    // DIN pin of MAX7219 module
-int load = 9;    // CS pin of MAX7219 module
-int clock = 10;  // CLK pin of MAX7219 module
+int data = 11;    // DIN pin of MAX7219 module
+int load = 10;    // CS pin of MAX7219 module
+int clock = 13;  // CLK pin of MAX7219 module
 
-int maxInUse = 5; //how many MAX7219 are connected
+int maxInUse = 1; //how many MAX7219 are connected
 
 MaxMatrix m(data, load, clock, maxInUse); // define Library
 
