@@ -1,0 +1,29 @@
+#include "LedControl.h"     // incluye libreria LedControl
+
+LedControl lc=LedControl(11,13,10,1); // crea objeto
+
+byte cero[8]= {        // array que contiene todos los elementos de las
+  B00111000,        // filas necesarias por mostrar el digito cero
+  B01000100,
+  B01000100,
+  B01000100,
+  B01000100,
+  B01000100,
+  B01000100,
+  B00111000
+};
+void mostrar_0(){      // funcion mostrar_0
+  for (int i = 0; i < 8; i++)     // bucle itera 8 veces por el array
+  {
+    lc.setRow(0,i,cero[i]);   // establece fila con valor de array cero en misma posicion
+  }
+}
+void setup() {
+  lc.shutdown(0,false);     // enciende la matriz
+  lc.setIntensity(0,5);     // establece brillo
+  lc.clearDisplay(0);     // blanquea matriz
+}
+
+void loop(){
+  mostrar_0();
+}
