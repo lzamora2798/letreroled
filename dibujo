@@ -1,6 +1,6 @@
 #include "LedControl.h"     // incluye libreria LedControl
-
 LedControl lc=LedControl(11,13,10,1); // crea objeto
+
 
 byte cero[8]= {        // array que contiene todos los elementos de las
   B00111000,        // filas necesarias por mostrar el digito cero
@@ -12,6 +12,20 @@ byte cero[8]= {        // array que contiene todos los elementos de las
   B01000100,
   B00111000
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 void mostrar_0(){      // funcion mostrar_0
   for (int i = 0; i < 8; i++)     // bucle itera 8 veces por el array
   {
